@@ -5,7 +5,6 @@
 #include <QTextCodec>
 #include <QTextStream>
 
-
 MQTTMessageWidget::MQTTMessageWidget(QWidget *parent)
     : QWidget(parent) {
     setupUI();
