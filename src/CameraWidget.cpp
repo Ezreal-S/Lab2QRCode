@@ -438,7 +438,8 @@ CameraWidget::CameraWidget(QWidget *parent)
         connect(exportHtmlAction, &QAction::triggered, this, [this]() {
             const QString def = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) +
                                 QDir::separator() + "scan_results.html";
-            const QString path = QFileDialog::getSaveFileName(this, tr("保存为 HTML (.html)"), def, tr("HTML 文件 (*.html)"));
+            const QString path =
+                QFileDialog::getSaveFileName(this, tr("保存为 HTML (.html)"), def, tr("HTML 文件 (*.html)"));
             if (!path.isEmpty()) {
                 if (exportResultsToHtml(path)) {
                     QMessageBox::information(this, tr("导出完成"), tr("已导出 HTML 文件：\n") + path);
@@ -451,7 +452,8 @@ CameraWidget::CameraWidget(QWidget *parent)
         connect(exportXlsxAction, &QAction::triggered, this, [this]() {
             const QString def = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) +
                                 QDir::separator() + "scan_results.xlsx";
-            const QString path = QFileDialog::getSaveFileName(this, tr("保存为 XLSX (.xlsx)"), def, tr("Excel 文件 (*.xlsx)"));
+            const QString path =
+                QFileDialog::getSaveFileName(this, tr("保存为 XLSX (.xlsx)"), def, tr("Excel 文件 (*.xlsx)"));
             if (!path.isEmpty()) {
                 if (exportResultsToXlsx(path)) {
                     QMessageBox::information(this, tr("导出完成"), tr("已导出 XLSX 文件：\n") + path);
@@ -851,7 +853,7 @@ void CameraWidget::retranslate() {
 }
 
 void CameraWidget::changeEvent(QEvent *event) {
-    if(event->type() == QEvent::LanguageChange){
+    if (event->type() == QEvent::LanguageChange) {
         retranslate();
     }
     QWidget::changeEvent(event);

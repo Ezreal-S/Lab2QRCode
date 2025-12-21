@@ -16,7 +16,8 @@ public:
     LanguageManager &operator=(const LanguageManager &) = delete;
     // 初始化语言函数，应当在BarcodeWidget的构造函数调用
     // 参数传入zh_CN或en_US此类字符串
-    // 从setting读取config.json传入最后一次选择的locale，若是默认参数则自动判断
+    // 后续应当从/setting读取config.json传入最后一次选择的locale，
+    // 若是默认参数则自动判断
     void init(QString locale = {});
     // 切换语言
     // 参数传入zh_CN或en_US此类字符串
