@@ -3,7 +3,6 @@ name: Cross-Platform CI
 on:
   push:
     branches:
-      - master
       - test-ci
     tags:
       - "v*" # 例如 v1.0, v2.0, v2.0.1 等
