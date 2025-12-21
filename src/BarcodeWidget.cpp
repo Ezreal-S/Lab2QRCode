@@ -30,7 +30,6 @@
 #include <ranges>
 #include <spdlog/spdlog.h>
 
-
 template <typename Ret, typename... Fs>
 requires(std::is_void_v<Ret> || std::is_default_constructible_v<Ret>)
 struct overload_def_noop : private Fs... {
