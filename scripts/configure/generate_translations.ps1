@@ -1,4 +1,5 @@
 #!/usr/bin/env pwsh
+
 param(
     [Parameter(Mandatory=$true)]
     [string]$LupdatePath,
@@ -17,8 +18,8 @@ $SourceDir = $SourceDir.Trim('"')
 
 # 定义需要的目录和文件
 $TranslationsDir = Join-Path $SourceDir "translations"
-$I18nDir        = Join-Path $SourceDir "resources\i18n"
-$QrcFile        = Join-Path $SourceDir "resources\i18n.qrc"
+$I18nDir        = Join-Path $SourceDir "resources/i18n"
+$QrcFile        = Join-Path $SourceDir "resources/i18n.qrc"
 
 # 确保目录存在
 if (-not (Test-Path $TranslationsDir)) {
